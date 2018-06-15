@@ -1,12 +1,8 @@
 
-
-function adicionaComportamentoBotaoRemover(){
-	var botoesRemover = document.querySelectorAll(".fa-times");
-	botoesRemover.forEach(function(botaoRemover) {
-			botaoRemover.addEventListener("click", function(event) {	    		
-	     		botaoRemover.parentNode.parentNode.remove(); 			    		
-			});
-		});
-}
-
-adicionaComportamentoBotaoRemover();
+var tabela = document.querySelector("#tabela-pacientes");
+tabela.addEventListener("click", function(event) {	
+	var elemento=event.target;
+	if(elemento.tagName=="I"){
+		elemento.parentNode.parentNode.remove()
+	}	    		 	
+});

@@ -23,8 +23,7 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     var tabela = document.querySelector("#tabela-pacientes");
 
-    tabela.appendChild(pacienteTr);
-    adicionaComportamentoBotaoRemover();
+    tabela.appendChild(pacienteTr);    
 
     form.reset();
 
