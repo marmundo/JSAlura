@@ -19,14 +19,25 @@ botaoAdicionar.addEventListener("click", function(event) {
     pacienteTr.appendChild(montaTd(paciente.altura,"info-altura"));
     pacienteTr.appendChild(montaTd(paciente.gordura,"info-gordura"));
     pacienteTr.appendChild(montaTd(paciente.imc,"info-imc"));
+    pacienteTr.appendChild(criaBotaoFechar(),"btn");
 
     var tabela = document.querySelector("#tabela-pacientes");
 
     tabela.appendChild(pacienteTr);
+    adicionaComportamentoBotaoRemover();
 
     form.reset();
 
 });
+
+function criaBotaoFechar(){
+    var td= document.createElement("td");
+    var i= document.createElement("i");
+    i.classList.add("fas");
+    i.classList.add("fa-times");
+    td.appendChild(i);    
+    return td;    
+}
 
 function montaTr(classe){
     var tr= document.createElement("tr");
@@ -40,3 +51,4 @@ function montaTd(conteudo,classe){
     td.textContent=conteudo;
     return td;
 }
+
